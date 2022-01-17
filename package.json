@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-meece",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iMeece/portfolio-meece.git"
+  },
+  "author": "iMeece",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iMeece/portfolio-meece/issues"
+  },
+  "homepage": "https://github.com/iMeece/portfolio-meece#readme",
+  "devDependencies": {
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
