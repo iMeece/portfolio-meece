@@ -1,17 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/*          ANIMATIONS          */
+@keyframes slide-first-title {
+    from {
+        color: rgba(0, 0, 0, 0);
+        right: 115px;
+    }
+    to {
+        color: black;
+        right: 0px;
+    }
+}
+
+@keyframes slide-second-title {
+    from {
+        color: rgba(0, 0, 0, 0);
+        left: 75px;
+    }
+    to {
+        color: black;
+        left: 0px;
+    }
+}
+
+
 /*          UTILITY         */
 
+body {
+    font-family: Montserrat;
+}
+
 .container {
-    height: 100vh;
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+.space {
+    height: 5px;
+    background-image: linear-gradient(#777, #aaa, #ddd, #fff);
 }
 
 /*          HEADER          */
 
-#content {
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
 header {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,21 +53,61 @@ header {
 
 header h1 {
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    position: relative;
 }
 
 #header-button-container {
     width: 40vw;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .header-button {
-    min-width: 110px;
+    min-width: 130px;
     padding: 12px 0;
     cursor: pointer;
-    background: white;
-    border: 1px solid rgb(197, 197, 197);
+    border: 1px solid hsl(197, 0%, 55%);
     border-radius: 7px;
+    background-image: linear-gradient(rgb(113, 192, 223), rgb(31, 120, 155));
+    color: white;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+#header-first-title {
+    animation-name: slide-first-title;
+    animation-duration: 1.5s;
+}
+
+#header-second-title {
+    animation-name: slide-second-title;
+    animation-duration: 1.6s;
+}
+
+
+
+/*          ABOUT           */
+
+#about {
+    background-color: #eee;
+}
+
+#about-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 75px 0;
+}
+
+#about section {
+    width: 40vw;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 30px;
 }
