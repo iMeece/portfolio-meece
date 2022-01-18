@@ -23,6 +23,19 @@
     }
 }
 
+@keyframes slide-skills {
+    from {
+        color: rgba(0, 0, 0, 0);
+        left: 115px;
+        border-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        color: rgb(31, 120, 155);
+        left: 0px;
+        border-color: rgb(31, 120, 155);
+    }
+}
+
 
 /*          UTILITY         */
 
@@ -39,6 +52,11 @@ body {
 .space {
     height: 5px;
     background-image: linear-gradient(#777, #aaa, #ddd, #fff);
+}
+
+.hide {
+    position: fixed;
+    left: 9999;
 }
 
 /*          HEADER          */
@@ -109,5 +127,57 @@ header h1 {
     font-size: 2.5rem;
     text-decoration: underline;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+#about-paragraph {
+    line-height: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.text-hidden {
+    color: rgba(0, 0, 0, 0);
+}
+
+.text-hidden .skill {
+    color: rgba(0, 0, 0, 0);
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.about-paragraph-animation {
+    animation-name: slide-first-title;
+    animation-duration: 1.5s;
+}
+
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.skill {
+    border: 3px solid rgb(31, 120, 155);
+    border-radius: 10px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+    color: rgb(31, 120, 155);
+    margin: 5px;
+}
+
+.skill h3 {
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.about-skills-animation {
+    animation-name: slide-skills;
+    animation-duration: 1.5s;
 }
