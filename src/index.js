@@ -1,5 +1,4 @@
-// Checks when you pass #about so that it can remove the hidden class and add an animation one.
-
+// Removes .hidden and adds a class to start the animation.
 function animateAbout() {
     elementAboutShouldAnimate = false;
 
@@ -17,6 +16,7 @@ function animateAbout() {
     }
 }
 
+// Checks when you pass #about when scrolling
 function addScrollListener() {
     document.addEventListener('scroll', function(e) {
 
@@ -67,6 +67,7 @@ function createSkillsList() {
     });
 }
 
+// Checks whether to play the animation if window width is too small
 function checkWindowWidth() {
     if (window.innerWidth < 730) {
         animateAbout();

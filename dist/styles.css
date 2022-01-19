@@ -40,7 +40,7 @@
 /*          UTILITY         */
 
 body {
-    font-family: Montserrat;
+    font-family: Montserrat, Arial, Helvetica;
 }
 
 .container {
@@ -57,6 +57,13 @@ body {
 .hide {
     position: fixed;
     left: 9999;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 /*          HEADER          */
@@ -121,13 +128,6 @@ header h1 {
     width: 40vw;
 }
 
-#about h2 {
-    font-size: 2.5rem;
-    text-decoration: underline;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
 #about-paragraph {
     line-height: 2rem;
     width: 90%;
@@ -185,9 +185,80 @@ header h1 {
     padding: 75px 0;
 }
 
-#projects h2 {
-    font-size: 2.5rem;
-    text-decoration: underline;
-    text-align: center;
+#projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.project {
+    width: 30%;
+    min-height: 250px;
+    border: 1px solid black;
+    margin: 10px 0;
+}
+
+/*          ARTICLE         */
+#contact {
+    background-color: #f5f5f5;
+}
+
+#contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 0;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact h3 {
     margin-bottom: 50px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.contact-input {
+    padding: 10px 12px;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-family: Montserrat, Arial, Helvetica;
+}
+
+#contact-name-subject {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#email-name,
+#email-subject {
+    width: 45%;
+}
+
+#email-submit-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#email-submit {
+    width: 130px;
+    padding: 12px 0;
+    cursor: pointer;
+    border: 1px solid hsl(197, 0%, 55%);
+    border-radius: 7px;
+    background-image: linear-gradient(rgb(113, 192, 223), rgb(31, 120, 155));
+    color: white;
+    font-weight: bold;
+    font-size: 1.05rem;
 }
