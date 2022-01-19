@@ -43,6 +43,15 @@ body {
     font-family: Montserrat, Arial, Helvetica;
 }
 
+#content {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 150px;
+}
+
 .container {
     width: 85%;
     margin: 0 auto;
@@ -221,7 +230,7 @@ header h1 {
 #contact-form {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 65%;
 }
 
 .contact-input {
@@ -261,4 +270,43 @@ header h1 {
     color: white;
     font-weight: bold;
     font-size: 1.05rem;
+}
+
+#contact textarea {
+    resize: none;
+}
+
+/*          FOOTER              */
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(43, 43, 43);
+    color: white;
+}
+
+#home-button {
+    min-width: 50px;
+    padding: 12px 0;
+    cursor: pointer;
+    border: 1px solid hsl(197, 0%, 55%);
+    border-radius: 7px;
+    background-image: linear-gradient(rgb(113, 192, 223), rgb(31, 120, 155));
+    color: white;
+    font-weight: bold;
+    font-size: 1.05rem;
+    position: relative;
+    top: -10px;
+}
+
+#footer h4 {
+    padding-top: 30px;
+}
+
+#footer h4 a {
+    color: white;
 }
