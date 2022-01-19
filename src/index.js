@@ -1,4 +1,22 @@
 // Checks when you pass #about so that it can remove the hidden class and add an animation one.
+
+function animateAbout() {
+    elementAboutShouldAnimate = false;
+
+    const elementParagraph = document.getElementById('about-paragraph');
+    elementParagraph.classList.remove('text-hidden');
+    elementParagraph.classList.add('about-paragraph-animation');
+
+    const elementSkills = document.getElementById('skills-container');
+    elementSkills.classList.remove('text-hidden');
+    elementSkills.classList.add('about-skills-animation');
+
+    const skillArray = document.getElementsByClassName('skill');
+    for (let i = 0; i < skillArray.length; i++) {
+        skillArray[i].classList.add('about-skills-animation');
+    }
+}
+
 function addScrollListener() {
     document.addEventListener('scroll', function(e) {
 
@@ -7,20 +25,7 @@ function addScrollListener() {
         const elementAboutCenter = elementAbout.offsetTop + (elementAbout.offsetHeight/2);
     
         if (scrollBottom > elementAboutCenter && elementAboutShouldAnimate) {
-            elementAboutShouldAnimate = false;
-            // Animation Logic
-            const elementParagraph = document.getElementById('about-paragraph');
-            elementParagraph.classList.remove('text-hidden');
-            elementParagraph.classList.add('about-paragraph-animation');
-
-            const elementSkills = document.getElementById('skills-container');
-            elementSkills.classList.remove('text-hidden');
-            elementSkills.classList.add('about-skills-animation');
-
-            const skillArray = document.getElementsByClassName('skill');
-            for (let i = 0; i < skillArray.length; i++) {
-                skillArray[i].classList.add('about-skills-animation');
-            }
+            animateAbout();
         };
     })
 }
@@ -62,9 +67,23 @@ function createSkillsList() {
     });
 }
 
+function checkWindowWidth() {
+    if (window.innerWidth < 730) {
+        animateAbout();
+    }
+    else {
+        window.addEventListener('resize', function(e) {
+            if (elementAboutShouldAnimate && window.innerWidth < 730) {
+                animateAbout();
+            };
+        });
+    }
+}
+
 let elementAboutShouldAnimate = true; // To stop adding and removing from #about
 
 function initializeScript() {
+    checkWindowWidth();
     addScrollListener();
     smoothHyperLinks();
     createSkillsList();
